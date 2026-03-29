@@ -10,7 +10,7 @@ import {
 
 export default function ProductCard() {
   return (
-    <Card className="relative mx-auto w-full max-w-sm pt-0">
+    <Card className="relative w-60 pt-0">
       <div className="absolute inset-0 z-30 h-70 bg-black/35" />
       <img
         src="https://avatar.vercel.sh/shadcn1"
@@ -22,7 +22,7 @@ export default function ProductCard() {
         <CardDescription>$ 10</CardDescription>
       </CardHeader>
       <CardFooter className="">
-        <Button className="w-1/2">Add to Cart</Button>
+        <Button className="w-1/2">Add</Button>
       </CardFooter>
     </Card>
   )

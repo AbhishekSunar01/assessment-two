@@ -1,10 +1,27 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import { User } from "lucide-react"
 import { Croissant } from "lucide-react"
 import Link from "next/link"
 
-  export default function Navbar() {
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <nav className="border-b px-72 py-4">
+    <nav
+      className={`sticky top-0 z-50 border-b px-72 py-4 transition-all duration-300 ${
+        scrolled
+          ? "border-transparent bg-background/60 backdrop-blur-md"
+          : "bg-background"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2 text-3xl font-bold">
           <div className="text-accent">
