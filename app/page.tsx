@@ -1,3 +1,4 @@
+import ProductCard from "@/components/product-card"
 import { Button } from "@/components/ui/button"
 
 export default function Page() {
@@ -9,6 +10,9 @@ export default function Page() {
           <p>You may now add components and start building.</p>
           <p>We&apos;ve already added the button component for you.</p>
           <Button className="mt-2">Button</Button>
+        </div>
+        <div>
+          <ProductCard />
         </div>
         <div className="font-mono text-xs text-muted-foreground">
           (Press <kbd>d</kbd> to toggle dark mode)
