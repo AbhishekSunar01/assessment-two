@@ -1,4 +1,4 @@
-export default function Navbar() {
+  export default function Navbar() {
   return (
     <nav className="border-b px-72 py-4">
       <div className="container mx-auto flex items-center justify-between">
